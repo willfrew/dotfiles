@@ -1,0 +1,20 @@
+! #####--------------#####
+! ##### URXVT Config #####
+! #####--------------#####
+
+!URxvt.background:	#0A0A0A
+URxvt.foreground:	#AAAAAA
+URxvt.scrollBar	:	false
+URxvt.font	:	xft:Terminus:size=12
+URxvt.termName  :	rxvt
+URxvt.transparent:	true
+URxvt.shading	:	15
+
+Xft.antialias	:	true
+Xft.rgba 	:	rgb
+
+! urxvt-perls extensions
+URxvt.perl-ext-common: clipboard
+URxvt.clipboard.autocopy: true
+URxvt.keysym.M-c:   perl:clipboard:copy
+URxvt.keysym.M-v:   perl:clipboard:paste
