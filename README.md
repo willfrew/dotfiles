@@ -1,3 +1,3 @@
 # Dotfiles
 
-Install using `./install.sh` - nowt fancy.
+Install with `./install.sh` - nowt fancy.
