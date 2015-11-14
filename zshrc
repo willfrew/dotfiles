@@ -26,10 +26,13 @@ alias netstop='sudo netctl stop'
 # Aura (pacman) alias
 alias pacman='sudo aura'
 alias svim='sudo vim'
+
 alias hibrnte='sudo systemctl hibernate'
 alias cp='rsync -avhz --progress'
 alias ls='ls --color=always -h'
+alias df='df -h'
 alias biggest='du -h . | sort -rh | head -$1'
+
 # Base64 encode and decode
 function b64d() {
   echo "$1" | base64 -d
