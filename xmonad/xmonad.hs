@@ -18,7 +18,7 @@ w0rksp4ces = ["code", "web", "term", "skype", "tunes", "6", "7", "8", "9"]
 
 -- Per-program management
 managePr0gz = composeAll
-                [ className =? "Chromium" --> viewShift "web",
+                [ className =? "chromium" --> viewShift "web",
                   className =? "Firefox"  --> viewShift "web",
                   className =? "Brackets" --> viewShift "code",
                   className =? "Atom"     --> viewShift "code",
