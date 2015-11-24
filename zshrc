@@ -53,6 +53,13 @@ export PATH=$PATH:$GOPATH/bin
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # RVM
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-[[ -r "$HOME/.rvm/scripts/completion" ]] && source "$HOME/.rvm/scripts/completion"
+RVMINIT="$HOME/.rvm/scripts/rvm"
+if [ -s $RVMINIT ]; then
+  export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+  source $RVMINIT
+  [[ -r "$HOME/.rvm/scripts/completion" ]] && source "$HOME/.rvm/scripts/completion"
+fi
+
+# NVM
+NVMINIT="/usr/share/nvm/init-nvm.sh"
+[[ -s $NVMINIT ]] && source $NVMINIT
