@@ -3,7 +3,7 @@ xrdb -merge ~/.Xresources
 # Cursor
 xsetroot -cursor_name left_ptr
 # Keymap
-setxkbmap -layout gb
+setxkbmap -layout us
 # Increase key repeat rate
 xset r rate 200 28
 # Wallpaper
