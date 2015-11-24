@@ -30,14 +30,14 @@ managePr0gz = composeAll
                 ]
                 where viewShift = doF . liftM2 (.) W.greedyView W.shift
 
-k3yz        = [ 
+k3yz        = [
                 ("M-S-l", spawn "xscreensaver-command --lock"),
                 ("M-i", spawn "chromium" ),
                 ("<XF86AudioRaiseVolume>", spawn "amixer set Master 1+"),
                 ("<XF86AudioLowerVolume>", spawn "amixer set Master 1-"),
                 ("<XF86MonBrightnessUp>", spawn "xbacklight -inc 10"),
                 ("<XF86MonBrightnessDown>", spawn "xbacklight -dec 10")
-              ] 
+              ]
               ++ -- Stop greedyViewing on multiple screens
               [(otherModMasks ++ "M-" ++ [key], action tag)
                 | (tag, key) <- zip w0rksp4ces "123456789"
@@ -45,7 +45,7 @@ k3yz        = [
                                                 , ("S-", windows . W.shift)]
               ]
 
-c0nf1g =  defaultConfig 
+c0nf1g =  defaultConfig
             { terminal     = "urxvt",
               modMask      = mod4Mask, -- Windows key
               borderWidth  = 1,        -- 1 pixel window borders
@@ -54,7 +54,7 @@ c0nf1g =  defaultConfig
               workspaces = w0rksp4ces,
               manageHook = managePr0gz <+> manageDocks <+> manageHook defaultConfig,
               layoutHook   = avoidStruts $ Tall 1 (3/100) (1/2) ||| noBorders Full,
-              handleEventHook = docksEventHook <+> handleEventHook defaultConfig 
+              handleEventHook = docksEventHook <+> handleEventHook defaultConfig
             }
-          `additionalKeysP` k3yz 
+          `additionalKeysP` k3yz
 
