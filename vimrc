@@ -21,6 +21,11 @@ set wildmenu
 set number
 hi LineNr ctermfg=darkgrey
 
+" Highlight trailing whitspace
+hi ExtraWhitespace ctermbg=darkred
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhitespace /\s\+$/
+
 " Don't redraw so much
 set lazyredraw
 
