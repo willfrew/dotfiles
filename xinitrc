@@ -2,7 +2,7 @@
 xrdb -merge ~/.Xresources
 # Cursor
 xsetroot -cursor_name left_ptr
-# Keymap
+# US Keymap everywhere (even on non-us keyboards), for consistency
 setxkbmap -layout us
 # Increase key repeat rate
 xset r rate 200 28
@@ -10,3 +10,4 @@ xset r rate 200 28
 sh ~/.fehbg &
 # Xmonad
 exec xmonad
+

@@ -10,8 +10,8 @@ import Control.Monad (liftM2)
 import qualified XMonad.StackSet as W
 
 
-main = 
-  xmonad =<< xmobar c0nf1g 
+main =
+  xmonad =<< xmobar c0nf1g
 
 -- Named (and un-named) workspaces.
 w0rksp4ces = ["code", "web", "term", "skype", "tunes", "6", "7", "8", "9"]
@@ -37,6 +37,11 @@ k3yz        = [
                 ("<XF86AudioLowerVolume>", spawn "amixer set Master 1-"),
                 ("<XF86MonBrightnessUp>", spawn "xbacklight -inc 10"),
                 ("<XF86MonBrightnessDown>", spawn "xbacklight -dec 10")
+                ("<XF86AudioMute>", spawn "amixer set Master toggle"),
+                -- asus specific binds
+                -- TODO: work out how to set keys per machine.
+                ("<XF86KbdBrightnessUp>", spawn "asus-kbd-backlight up"),
+                ("<XF86KbdBrightnessDown>", spawn "asus-kbd-backlight down")
               ]
               ++ -- Stop greedyViewing on multiple screens
               [(otherModMasks ++ "M-" ++ [key], action tag)

@@ -1,2 +1,2 @@
 #!/bin/sh
-feh  --bg-scale '/home/will/Pictures/Wallpapers/BinaryCloud.png' 
+feh  --bg-scale '/home/will/wall.png' 

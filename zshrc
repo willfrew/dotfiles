@@ -7,8 +7,10 @@ zstyle ':completion:*' menu select=long
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle :compinstall filename '/home/will/.zshrc'
 
+# Setup completion
 autoload -Uz compinit
 compinit
+
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -23,7 +25,8 @@ bindkey -e
 alias netstrt='sudo netctl start'
 alias netswtch='sudo netctl switch-to'
 alias netstop='sudo netctl stop'
-# Aura (pacman) alias
+
+# Assorted other aliases
 alias pacman='sudo aura'
 alias svim='sudo vim'
 
@@ -32,6 +35,10 @@ alias cp='rsync -avhz --progress'
 alias ls='ls --color=always -h'
 alias df='df -h'
 alias biggest='du -h . | sort -rh | head -$1'
+
+# Attempt to stop myself using pip!
+alias _pip=$(which pip)
+alias pip='echo "use _pip if you really want to use pip, otherwise use pacman" #'
 
 # Base64 encode and decode
 function b64d() {
@@ -63,3 +70,4 @@ fi
 # NVM
 NVMINIT="/usr/share/nvm/init-nvm.sh"
 [[ -s $NVMINIT ]] && source $NVMINIT
+
