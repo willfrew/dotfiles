@@ -13,6 +13,7 @@ echo "Ensuring vim plugins are installed"
 cd $SCRIPTDIR
 git submodule init
 git submodule update
+cd ./vim/bundle/vimproc.vim && make
 cd $CWD
 echo "done."
 

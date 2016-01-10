@@ -39,3 +39,7 @@ nnoremap <leader><space> :nohlsearch<CR>
 let g:tex_flavor = "latex"
 " Spellchecking for .tex files
 autocmd FileType tex setlocal spell
+
+" Omni-completion
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
