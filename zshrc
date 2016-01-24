@@ -71,3 +71,12 @@ fi
 NVMINIT="/usr/share/nvm/init-nvm.sh"
 [[ -s $NVMINIT ]] && source $NVMINIT
 
+# Store the last directory cd'd into so that we can start new shells in the
+# same directory.
+# Also chmod's it to 600 (rw owner) for a bit of security paranoia
+# See xmonad/xmonad.hs for corresponding command to start urxvt
+function cd() {
+  builtin cd "$@"
+  echo $PWD > /tmp/.last_dir
+  chmod 600 /tmp/.last_dir
+}
