@@ -51,7 +51,7 @@ myKeys      = [
               ]
 
 conf      = defaultConfig
-            { terminal     = "urxvt -cd $(cat /tmp/.last_dir || echo $HOME)",
+            { terminal     = "urxvt -cd \"$(cat /tmp/.last_dir || echo $HOME)\"",
               modMask      = mod4Mask, -- Windows key
               borderWidth  = 1,        -- 1 pixel window borders
               normalBorderColor = "#515151",
